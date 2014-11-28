@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FAQs</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Content 1</string>
+			<key>URL</key>
+			<string>DummyContent.html</string>
+			<key>LocationType</key>
+			<string>local</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Content 2</string>
+			<key>URL</key>
+			<string>DummyContent.html</string>
+			<key>LocationType</key>
+			<string>local</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Content 3</string>
+			<key>URL</key>
+			<string>http://www.google.com</string>
+			<key>LocationType</key>
+			<string>remote</string>
+		</dict>
+	</array>
+</dict>
+</plist>
