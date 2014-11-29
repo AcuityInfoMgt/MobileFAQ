@@ -7,6 +7,10 @@ The app is written in Swift as a universal app for both iPhone and iPad. The ind
 
 Developers must populate the FAQs.plist file with a list of each of the FAQ documents in the order in which they should be displayed.
 
+![iPad Screen](screenshot_1.png?raw=true "iPad Screen")
+
+![iPhone Screen](screenshot_2.png?raw=true "iPhone Screen")
+
 ##Requirements
 
 * iPhone, iPad
