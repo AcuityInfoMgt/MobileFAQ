@@ -13,7 +13,6 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     
     var pageData = Array<Dictionary<String, String>>()
     
-    
     override init() {
         super.init()
         

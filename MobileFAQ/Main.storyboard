@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gV-pZ-0SN">
                                 <rect key="frame" x="8" y="27" width="32" height="38"/>
                                 <state key="normal" image="MenuIcon"/>
+                                <connections>
+                                    <action selector="showFAQList:" destination="S4R-Ja-viH" eventType="touchUpInside" id="cvV-Vc-axq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

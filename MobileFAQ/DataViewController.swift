@@ -72,5 +72,20 @@ class DataViewController: UIViewController {
         }
     }
     
+    @IBAction func showFAQList(sender: AnyObject) {
+        
+        var faqList = FAQTableViewController(style: UITableViewStyle.Plain)
+        faqList.dataViewController = self
+        var nav = UINavigationController(rootViewController: faqList)
+        nav.modalPresentationStyle = UIModalPresentationStyle.Popover
+        var popover = nav.popoverPresentationController
+        faqList.preferredContentSize = CGSizeMake(500,600)
+        //popover!.delegate = self
+        popover!.sourceView = self.view
+        popover!.sourceRect = CGRectMake(15,54,0,0)
+        
+        self.presentViewController(nav, animated: true, completion: nil)
+        
+    }
     
 }
