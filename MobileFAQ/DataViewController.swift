@@ -34,7 +34,7 @@ class DataViewController: UIViewController {
                 let pathExtention = NSString(string: filename).pathExtension
                 let pathPrefix = NSString(string: filename).stringByDeletingPathExtension
                 
-                if let url = NSBundle.mainBundle().URLForResource(pathPrefix, withExtension: pathExtention) {
+                if let url = NSBundle.mainBundle().URLForResource(pathPrefix, withExtension: pathExtention, subdirectory: "www") {
                     webView.loadRequest(NSURLRequest(URL: url))
                 }
                 
@@ -46,8 +46,6 @@ class DataViewController: UIViewController {
             }
             
         }
-        
-        
         
         containerView.addSubview(webView)
     }

@@ -6,17 +6,17 @@
 	<array>
 		<dict>
 			<key>Title</key>
-			<string>Content 1</string>
+			<string>Logging in for the First Time</string>
 			<key>URL</key>
-			<string>DummyContent.html</string>
+			<string>item0.html</string>
 			<key>LocationType</key>
 			<string>local</string>
 		</dict>
 		<dict>
 			<key>Title</key>
-			<string>Content 2</string>
+			<string>Changing Your Default Email, Contacts, and Calendar</string>
 			<key>URL</key>
-			<string>DummyContent.html</string>
+			<string>item1.html</string>
 			<key>LocationType</key>
 			<string>local</string>
 		</dict>
