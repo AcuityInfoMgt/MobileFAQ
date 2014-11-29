@@ -22,11 +22,11 @@
 		</dict>
 		<dict>
 			<key>Title</key>
-			<string>Content 3</string>
+			<string>Accessing OpenNet Email</string>
 			<key>URL</key>
-			<string>http://www.google.com</string>
+			<string>item2.html</string>
 			<key>LocationType</key>
-			<string>remote</string>
+			<string>local</string>
 		</dict>
 	</array>
 </dict>

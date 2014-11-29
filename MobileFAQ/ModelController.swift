@@ -11,6 +11,7 @@ import UIKit
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
     
+    var rootViewController: RootViewController?
     var pageData = Array<Dictionary<String, String>>()
     
     override init() {

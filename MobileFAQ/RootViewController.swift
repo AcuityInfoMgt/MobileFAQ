@@ -45,11 +45,20 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         // In more complex implementations, the model controller may be passed to the view controller.
         if _modelController == nil {
             _modelController = ModelController()
+            _modelController?.rootViewController = self
         }
         return _modelController!
     }
     
     var _modelController: ModelController? = nil
+    
+    func moveToViewControllerAtIndex(index: Int) {
+        
+        let viewController = modelController.viewControllerAtIndex(index, storyboard: storyboard!)!
+        
+        pageViewController?.setViewControllers([viewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        
+    }
     
     // MARK: - UIPageViewController delegate methods
     

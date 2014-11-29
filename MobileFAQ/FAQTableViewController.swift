@@ -15,7 +15,9 @@ class FAQTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.title = "FAQs"
+        
         // Load the FAQ manifest
         let path = NSBundle.mainBundle().pathForResource("FAQs", ofType:"plist")
         let dict = NSDictionary(contentsOfFile:path!)
@@ -23,7 +25,7 @@ class FAQTableViewController: UITableViewController {
         faqData = faqList
         
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Bordered, target: self, action: Selector("cancelEvent"))
-        self.navigationItem.rightBarButtonItem = cancelButton
+        navigationItem.rightBarButtonItem = cancelButton
     }
 
     // MARK: - Table view data source
@@ -50,20 +52,19 @@ class FAQTableViewController: UITableViewController {
         return cell!
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        dataViewController.itemController?.rootViewController?.moveToViewControllerAtIndex(indexPath.row)
+        
+        dataViewController.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
     // MARK: - Close Navigation Window
     
     func cancelEvent() {
         dataViewController.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
