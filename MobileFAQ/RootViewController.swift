@@ -56,7 +56,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         
         let viewController = modelController.viewControllerAtIndex(index, storyboard: storyboard!)!
         
-        pageViewController?.setViewControllers([viewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        pageViewController?.setViewControllers([viewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         
     }
     

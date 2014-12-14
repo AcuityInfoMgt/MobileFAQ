@@ -47,15 +47,15 @@ class FAQTableViewController: UITableViewController {
         
         let faq = faqData[indexPath.row]
         
-        cell!.textLabel.text = faq["Title"]
+        cell!.textLabel!.text = faq["Title"]
         
         return cell!
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        dataViewController.itemController?.rootViewController?.moveToViewControllerAtIndex(indexPath.row)
         
         dataViewController.dismissViewControllerAnimated(true, completion: nil)
+        dataViewController.itemController?.rootViewController?.moveToViewControllerAtIndex(indexPath.row)
         
     }
     
