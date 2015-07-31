@@ -21,7 +21,7 @@ class FAQTableViewController: UITableViewController {
         // Load the FAQ manifest
         let path = NSBundle.mainBundle().pathForResource("FAQs", ofType:"plist")
         let dict = NSDictionary(contentsOfFile:path!)
-        var faqList = dict!["FAQs"] as Array<Dictionary<String, String>>
+        var faqList = dict!["FAQs"] as! Array<Dictionary<String, String>>
         faqData = faqList
         
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Bordered, target: self, action: Selector("cancelEvent"))

@@ -20,7 +20,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         // Load the FAQ manifest
         let path = NSBundle.mainBundle().pathForResource("FAQs", ofType:"plist")
         let dict = NSDictionary(contentsOfFile:path!)
-        var faqList = dict!["FAQs"] as Array<Dictionary<String, String>>
+        var faqList = dict!["FAQs"] as! Array<Dictionary<String, String>>
         
         pageData = faqList
     }
@@ -32,7 +32,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         }
         
         // Create a new view controller and pass suitable data.
-        let dataViewController = storyboard.instantiateViewControllerWithIdentifier("DataViewController") as DataViewController
+        let dataViewController = storyboard.instantiateViewControllerWithIdentifier("DataViewController") as! DataViewController
         dataViewController.itemIndex = index
         dataViewController.dataObject = pageData[index]
         dataViewController.itemController = self
@@ -48,7 +48,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     // MARK: - Page View Controller Data Source
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as DataViewController)
+        var index = self.indexOfViewController(viewController as! DataViewController)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
@@ -58,7 +58,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as DataViewController)
+        var index = self.indexOfViewController(viewController as! DataViewController)
         if index == NSNotFound {
             return nil
         }
